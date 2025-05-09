@@ -6,12 +6,24 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number) {
-        if (number < 1 || number > 3) {
-            throw new IllegalArgumentException("La conversione può essere effettuate solamente con numeri compresi tra 0 e 3");
+        if (number < 1 || number > 6) {
+            throw new IllegalArgumentException("La conversione può essere effettuate solamente con numeri compresi tra 0 e 6");
         }
         StringBuilder rn = new StringBuilder();
-        for (int i = 0; i < number; i++) {
-            rn.append("I");
+        if (number >= 5) {
+            rn.append("V");
+            number -= 5;
+            for (int i = 0; i < number; i++) {
+                rn.append("I");
+            }
+        } else {
+            if (number == 4) {
+                rn.append("IV");
+            } else {
+                for (int i = 0; i < number; i++) {
+                    rn.append("I");
+                }
+            }
         }
         return rn.toString();
     }
