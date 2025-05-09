@@ -3,7 +3,9 @@
   "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <module name="Checker">
   <module name="FileLength"/>
-  <module name="LineLength"/>
+  <module name="LineLength">
+    <property name="max" value="120"/>
+  </module>
   <module name="FileTabCharacter"/>
   <module name="TreeWalker">
     <module name="BooleanExpressionComplexity"/>
@@ -15,6 +17,6 @@
     <module name="NeedBraces"/>
   </module>
   <module name="RegexpHeader">
-    <property name="headerFile" value="${checkstyle.header.file}"/>
+    <property name="headerFile" value="LICENSE.txt"/>
   </module>
 </module>

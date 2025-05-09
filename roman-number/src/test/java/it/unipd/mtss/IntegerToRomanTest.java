@@ -24,9 +24,17 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testFirstTenNumbers() {
+        assertEquals("VII", IntegerToRoman.convert(7));
+        assertEquals("VIII", IntegerToRoman.convert(8));
+        assertEquals("IX", IntegerToRoman.convert(9));
+        assertEquals("X", IntegerToRoman.convert(10));
+    }
+
+    @Test
     public void testNumberOutOfBounds() {
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(0));
-        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(7));
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(12));
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(-1));
     }
 }
