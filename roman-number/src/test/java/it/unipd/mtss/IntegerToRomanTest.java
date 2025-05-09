@@ -32,9 +32,23 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testFirstTwentyNumbers() {
+        assertEquals("XI", IntegerToRoman.convert(11));
+        assertEquals("XII", IntegerToRoman.convert(12));
+        assertEquals("XIII", IntegerToRoman.convert(13));
+        assertEquals("XIV", IntegerToRoman.convert(14));
+        assertEquals("XV", IntegerToRoman.convert(15));
+        assertEquals("XVI", IntegerToRoman.convert(16));
+        assertEquals("XVII", IntegerToRoman.convert(17));
+        assertEquals("XVIII", IntegerToRoman.convert(18));
+        assertEquals("XIX", IntegerToRoman.convert(19));
+        assertEquals("XX", IntegerToRoman.convert(20));
+    }
+
+    @Test
     public void testNumberOutOfBounds() {
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(0));
-        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(12));
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(21));
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(-1));
     }
 }

@@ -5,26 +5,17 @@
 package it.unipd.mtss;
 
 public class IntegerToRoman {
+    private static final int[] numbers = {10, 9, 5, 4, 1};
+    private static final String[] romans = {"X", "IX", "V", "IV", "I"};
     public static String convert(int number) {
-        if (number < 1 || number > 10) {
-            throw new IllegalArgumentException("Il numero deve essere compreso tra 0 e 10");
+        if (number < 1 || number > 20) {
+            throw new IllegalArgumentException("Il numero deve essere compreso tra 0 e 20");
         }
         StringBuilder rn = new StringBuilder();
-        if (number == 10) {
-            rn.append("X");
-        } else if (number == 9) {
-            rn.append("IX");
-        } else if (number >= 5) {
-            rn.append("V");
-            number -= 5;
-            for (int i = 0; i < number; i++) {
-                rn.append("I");
-            }
-        } else if (number == 4) {
-            rn.append("IV");
-        } else {
-            for (int i = 0; i < number; i++) {
-                rn.append("I");
+        for (int i = 0; i < numbers.lenght && number >= 0; i++) {
+            while (numbers[i] <= number) {
+                number -= numbers[i];
+                rn.append(romans[i]);
             }
         }
         return rn.toString();
