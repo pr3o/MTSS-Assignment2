@@ -12,7 +12,7 @@ public class IntegerToRoman {
             throw new IllegalArgumentException("Il numero deve essere compreso tra 0 e 20");
         }
         StringBuilder rn = new StringBuilder();
-        for (int i = 0; i < numbers.lenght && number >= 0; i++) {
+        for (int i = 0; i < numbers.length && number >= 0; i++) {
             while (numbers[i] <= number) {
                 number -= numbers[i];
                 rn.append(romans[i]);
