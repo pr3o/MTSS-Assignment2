@@ -17,6 +17,6 @@
     <module name="NeedBraces"/>
   </module>
   <module name="RegexpHeader">
-    <property name="headerFile" value="LICENSE.txt"/>
+    <property name="headerFile" value="${checkstyle.header.file}"/>
   </module>
 </module>
