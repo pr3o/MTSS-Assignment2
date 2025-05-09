@@ -75,7 +75,7 @@ public class IntegerToRomanTest {
     @Test
     public void testNumberOutOfBounds() {
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(0));
-        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(51));
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(101));
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(-1));
     }
 }
