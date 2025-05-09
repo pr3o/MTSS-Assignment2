@@ -59,6 +59,20 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testFirstOneHundredNumbers() {
+        assertEquals("LI", IntegerToRoman.convert(51));
+        assertEquals("LIII", IntegerToRoman.convert(53));
+        assertEquals("LXIV", IntegerToRoman.convert(64));
+        assertEquals("LXVIII", IntegerToRoman.convert(68));
+        assertEquals("LXXV", IntegerToRoman.convert(75));
+        assertEquals("LXXVII", IntegerToRoman.convert(77));
+        assertEquals("LXXXII", IntegerToRoman.convert(82));
+        assertEquals("LXXXIX", IntegerToRoman.convert(89));
+        assertEquals("XCVI", IntegerToRoman.convert(96));
+        assertEquals("C", IntegerToRoman.convert(100));
+    }
+
+    @Test
     public void testNumberOutOfBounds() {
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(0));
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(51));

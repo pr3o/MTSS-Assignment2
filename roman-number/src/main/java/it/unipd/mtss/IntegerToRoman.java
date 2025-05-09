@@ -5,11 +5,11 @@
 package it.unipd.mtss;
 
 public class IntegerToRoman {
-    private static final int[] numbers = {50, 40, 10, 9, 5, 4, 1};
-    private static final String[] romans = {"L", "XL", "X", "IX", "V", "IV", "I"};
+    private static final int[] numbers = {100, 90, 50, 40, 10, 9, 5, 4, 1};
+    private static final String[] romans = {"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
     public static String convert(int number) {
-        if (number < 1 || number > 50) {
-            throw new IllegalArgumentException("Il numero deve essere compreso tra 0 e 50");
+        if (number < 1 || number > 100) {
+            throw new IllegalArgumentException("Il numero deve essere compreso tra 0 e 100");
         }
         StringBuilder rn = new StringBuilder();
         for (int i = 0; i < numbers.length && number >= 0; i++) {
